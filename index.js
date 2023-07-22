@@ -6,7 +6,7 @@ import userRouter from "./routes/user.js";
 import tourRouter from "./routes/tour.js";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-const url = 'mongodb://0.0.0.0:27017/';
+const url = 'mongodb://0.0.0.0:27017/tourapp';
 
 
 // Database Name
