@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(bodyParser.json());
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://lpaul4440:<password>@tourapp.9nrhixd.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://lpaul4440:react@9562@tourapp.9nrhixd.mongodb.net/?retryWrites=true&w=majority";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
