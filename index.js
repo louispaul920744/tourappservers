@@ -1,5 +1,5 @@
 import express from "express";
-import { MongoClient } from 'mongodb'
+
 import cors from "cors";
 import morgan from "morgan";
 import userRouter from "./routes/user.js";
