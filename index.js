@@ -20,16 +20,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(bodyParser.json());
 
-import { MongoClient, ServerApiVersion } from 'mongodb'
-const uri = "mongodb+srv://lpaul4440:react@9562@tourapp.9nrhixd.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://lpaul4440:reactlouis@tourapp.9nrhixd.mongodb.net/?retryWrites=true&w=majority";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+mongoose .connect(uri, { useNewUrlParser: true }) .then(() => console.log("MongoDB connected")) .catch((err) => console.log(err));
 app.use("/users", userRouter);
 app.use("/tour", tourRouter);
 app.get("/", (req, res) => {
